@@ -34,7 +34,7 @@ export const productDetailsReducer = (state = { product: { reviews: [] }}, actio
         case PRODUCT_DETAILS_REQUEST: 
             return {
                 loading: true,
-                ...state
+                ...state // save the previous state
             }
         case PRODUCT_DETAILS_SUCCESS: 
             return {
