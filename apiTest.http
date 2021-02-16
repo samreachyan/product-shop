@@ -26,7 +26,14 @@ Content-Type: application/json
 }
 
 ###
-GET  http://localhost:5000/api/users/profile HTTP/1.1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmJmYzYzZGYyNmFmMjMyZGY3NTQ5MSIsImlhdCI6MTYxMzQ5NzI2OCwiZXhwIjoxNjE2MDg5MjY4fQ._OjaU34AA9TLLciHASF6kCHESWDc_4cnA_NpSASj4YI
+GET http://localhost:5000/api/users/profile HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmJmYzYzZGYyNmFmMjMyZGY3NTQ5MSIsImlhdCI6MTYxMzUwMzI5NSwiZXhwIjoxNjE2MDk1Mjk1fQ.u6aTiz-mzpeV6NeTfILn885hl_E5Wh-2CuuqurVJV5E
 
-###
+### update profile 
+PUT http://localhost:5000/api/users/profile HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmJmYzYzZGYyNmFmMjMyZGY3NTQ5MSIsImlhdCI6MTYxMzUwMzI5NSwiZXhwIjoxNjE2MDk1Mjk1fQ.u6aTiz-mzpeV6NeTfILn885hl_E5Wh-2CuuqurVJV5E
+Content-Type: application/json
+
+{
+    "name": "Admin User"
+}

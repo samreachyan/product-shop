@@ -8,6 +8,6 @@ router.post('/login', authUser)
 router
     .route('/profile')
     .get(protect, getUserProfile)
-    .get(protect, updateUserProfile)
+    .put(protect, updateUserProfile)
 
 module.exports = router
