@@ -3,14 +3,30 @@ GET http://localhost:5000/api/products HTTP/1.1
 
 ### 
 
-GET http://localhost:5000/api/products/602bf4c68c0ca81a5293d573 HTTP/1.1
+GET http://localhost:5000/api/products/602bf8793a57401e9732c021 HTTP/1.1
 
 ###
 
 POST http://localhost:5000/api/users/login HTTP/1.1
-content-type: application/json
+Content-Type: application/json
 
 {
-    "email": "samreachyan@gmail.com",
+    "email": "admin@gmail.com",
     "password": "123456"
 }
+
+### 
+POST http://localhost:5000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Reach",
+    "email": "reach@gmail.com",
+    "password": "123456"
+}
+
+###
+GET  http://localhost:5000/api/users/profile HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmJmYzYzZGYyNmFmMjMyZGY3NTQ5MSIsImlhdCI6MTYxMzQ5NzI2OCwiZXhwIjoxNjE2MDg5MjY4fQ._OjaU34AA9TLLciHASF6kCHESWDc_4cnA_NpSASj4YI
+
+###
