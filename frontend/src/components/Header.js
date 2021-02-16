@@ -1,8 +1,11 @@
 import React from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Navbar, Nav, Container } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+
+  const { cartItems } = useSelector((state) => state.cart)
   return (
     <header>
       <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
@@ -15,7 +18,7 @@ const Header = () => {
             <Nav className="ml-auto">
               <LinkContainer to='/cart'>
                 <Nav.Link>
-                  <i className='fas fa-shopping-cart'></i> Cart
+                  <i className='fas fa-shopping-cart'></i> Cart ({ cartItems.reduce((acc, item) => acc + item.qty, 0) })
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to='/login'>
