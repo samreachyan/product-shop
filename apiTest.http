@@ -16,6 +16,15 @@ Content-Type: application/json
 }
 
 ### 
+POST http://localhost:5000/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "samreachyan@gmail.com",
+    "password": "123456"
+}
+
+### 
 POST http://localhost:5000/api/users HTTP/1.1
 Content-Type: application/json
 
@@ -41,3 +50,9 @@ Content-Type: application/json
 ### View order by id
 GET http://localhost:5000/api/orders/602cd5e1dd1c4c3d330d559e HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmNkNTY3MWMyZWI2M2NkNDU3ZDhjZCIsImlhdCI6MTYxMzU1MTQ3MywiZXhwIjoxNjE2MTQzNDczfQ.x0rL9i2oFrTI7j7dr8uVL2DhDp3-YFAakw3cQTOrfWw
+
+
+### get my orders 
+GET http://localhost:5000/api/orders/myorders HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2ViMCIsImlhdCI6MTYxMzU4NTYzMCwiZXhwIjoxNjE2MTc3NjMwfQ.9KiEc1-t1Qm5ckH4mqQauiUPkAen3oXKopigjXcHwSQ
+
