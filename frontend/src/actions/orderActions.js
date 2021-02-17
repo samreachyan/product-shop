@@ -41,12 +41,13 @@ export const createOrder = (order) => async (dispatch, getState) => {
 
 export const getOrderDetails = (id) => async (dispatch, getState) => {
     try {
-        dispatch({ type: ORDER_CREATE_REQUEST })
+        dispatch({ type: ORDER_DETAILS_REQUEST })
         const { userLogin: { userInfo } } = getState()
 
         const config = {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${userInfo.token}`
             }
         }
         const { data} = await axios.get(`/api/orders/${id}`, config)

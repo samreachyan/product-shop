@@ -37,3 +37,7 @@ Content-Type: application/json
 {
     "name": "Admin User"
 }
+
+### View order by id
+GET http://localhost:5000/api/orders/602cd5e1dd1c4c3d330d559e HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmNkNTY3MWMyZWI2M2NkNDU3ZDhjZCIsImlhdCI6MTYxMzU1MTQ3MywiZXhwIjoxNjE2MTQzNDczfQ.x0rL9i2oFrTI7j7dr8uVL2DhDp3-YFAakw3cQTOrfWw
