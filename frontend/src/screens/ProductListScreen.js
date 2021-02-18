@@ -29,7 +29,7 @@ const ProductListScreen = ({ history }) => {
         }
 
         if (successCreate) {
-            history.push(`/admin/product/${createProduct._id}/edit`)
+            history.push(`/admin/product/${createdProduct._id}/edit`)
         } else {
             dispatch(listProduct())
         }
@@ -42,7 +42,7 @@ const ProductListScreen = ({ history }) => {
         }
     }
 
-    const createProductHandler = (product) => {
+    const createProductHandler = () => {
         //   CREATE PRODUCT
         dispatch(createProduct())
     }
