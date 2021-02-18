@@ -60,10 +60,8 @@ const ProductListScreen = ({ history }) => {
                 </Col>
             </Row>
 
-            {loadingDelete && <Loader />}
-            {errorDelete && <Message variant='danger'>{errorDelete}</Message>}
-            {loadingCreate && <Loader />}
-            {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
+            {(loadingDelete || loadingCreate) && <Loader />}
+            {(errorDelete || errorCreate) && <Message variant='danger'>{errorDelete}</Message>}
 
             {loading ? (
                 <Loader />
