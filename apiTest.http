@@ -3,7 +3,7 @@ GET http://localhost:5000/api/products HTTP/1.1
 
 ### 
 
-GET http://localhost:5000/api/products/602bf8793a57401e9732c021 HTTP/1.1
+GET http://localhost:5000/api/products/602d3f78a31cdb1c8df33eb2 HTTP/1.1
 
 ###
 
@@ -67,3 +67,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3Y
 ### create product by admin
 POST http://localhost:5000/api/products HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2VhZiIsImlhdCI6MTYxMzY2ODYwMiwiZXhwIjoxNjE2MjYwNjAyfQ.xFJmHIBGs8IsFHM64c3LMqXiJF3TQMtSggJP_4g4N7M
+
+
+### Review product id
+POST http://localhost:5000/api/products/602d3f78a31cdb1c8df33eb2/reviews
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2ViMCIsImlhdCI6MTYxMzY3NzU1MiwiZXhwIjoxNjE2MjY5NTUyfQ.N2Y3ZY9-kvfUQl8EUJU4CnCq4dgpGb_hj8dxp6i55Ns
+
+{
+    "rating": 5,
+    "comment": "This product are nice. Test rating from samreach"
+}
