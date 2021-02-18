@@ -60,3 +60,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3Y
 GET http://localhost:5000/api/users HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2VhZiIsImlhdCI6MTYxMzYyNDA1MiwiZXhwIjoxNjE2MjE2MDUyfQ.uJSzKoRMddlErurHGXIJ5BjAylry9-q2_HGj7Eh2U9U
 
+### get user by id
+GET http://localhost:5000/api/users/602d3f77a31cdb1c8df33eb1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2VhZiIsImlhdCI6MTYxMzY2ODYwMiwiZXhwIjoxNjE2MjYwNjAyfQ.xFJmHIBGs8IsFHM64c3LMqXiJF3TQMtSggJP_4g4N7M
