@@ -4,7 +4,8 @@ import { Table, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import { listProduct, deleteProduct } from '../actions/productActions'
+import { listProduct, deleteProduct, createProduct } from '../actions/productActions'
+import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
 
 const ProductListScreen = ({ history }) => {
     const dispatch = useDispatch()
@@ -18,13 +19,21 @@ const ProductListScreen = ({ history }) => {
     const productDelete = useSelector(state => state.productDelete)
     const { loading: loadingDelete, success: successDelete, error: errorDelete } = productDelete
 
+    const productCreate = useSelector(state => state.productCreate)
+    const { loading: loadingCreate, error: errorCreate, success: successCreate, product: createdProduct } = productCreate
+
     useEffect(() => {
-        if (userInfo && userInfo.isAdmin) {
-        dispatch(listProduct())
-        } else {
-        history.push('/login')
+        dispatch({ type: PRODUCT_CREATE_RESET })
+        if (!userInfo.isAdmin) {
+            history.push('/login')
         }
-    }, [dispatch, history, userInfo, successDelete])
+
+        if (successCreate) {
+            history.push(`/admin/product/${createProduct._id}/edit`)
+        } else {
+            dispatch(listProduct())
+        }
+    }, [dispatch, history, userInfo, successDelete, successCreate, createdProduct])
 
     const deleteHandler = (id) => {
         if (window.confirm('Are you sure')) {
@@ -35,7 +44,7 @@ const ProductListScreen = ({ history }) => {
 
     const createProductHandler = (product) => {
         //   CREATE PRODUCT
-
+        dispatch(createProduct())
     }
 
     return (
@@ -53,6 +62,8 @@ const ProductListScreen = ({ history }) => {
 
             {loadingDelete && <Loader />}
             {errorDelete && <Message variant='danger'>{errorDelete}</Message>}
+            {loadingCreate && <Loader />}
+            {errorCreate && <Message variant='danger'>{errorCreate}</Message>}
 
             {loading ? (
                 <Loader />
