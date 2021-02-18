@@ -56,3 +56,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmNkNTY3M
 GET http://localhost:5000/api/orders/myorders HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2ViMCIsImlhdCI6MTYxMzU4NTYzMCwiZXhwIjoxNjE2MTc3NjMwfQ.9KiEc1-t1Qm5ckH4mqQauiUPkAen3oXKopigjXcHwSQ
 
+### get all users / admin
+GET http://localhost:5000/api/users HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMmQzZjc3YTMxY2RiMWM4ZGYzM2VhZiIsImlhdCI6MTYxMzYyNDA1MiwiZXhwIjoxNjE2MjE2MDUyfQ.uJSzKoRMddlErurHGXIJ5BjAylry9-q2_HGj7Eh2U9U
+
