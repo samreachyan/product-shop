@@ -1,7 +1,10 @@
 ### get all products
 GET http://localhost:5000/api/products HTTP/1.1
 
-### 
+### Get top products
+GET http://localhost:5000/api/products/top HTTP/1.1
+
+###
 
 GET http://localhost:5000/api/products/602d3f78a31cdb1c8df33eb2 HTTP/1.1
 
